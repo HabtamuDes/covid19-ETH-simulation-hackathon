@@ -31,7 +31,7 @@ class Simulation():
             # find a way to detect a collition 
             self.infected.append(random.randint(200,500))
 
-            return blobs 
+            return blobs
         
         
     def draw(self,blobs):
@@ -45,7 +45,6 @@ class Simulation():
             else:
                 pygame.draw.circle(screen,blob.color,[blob.x,blob.y],blob.size)
             blob.move()
-            #detect collition hear
         pygame.display.update()
 
     def render(self):

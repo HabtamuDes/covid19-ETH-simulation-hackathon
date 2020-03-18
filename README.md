@@ -3,7 +3,7 @@
 # simulation for covid-19 in ethiopia
 
 
-this software is a simulation for covid-19 pandamic in ethiopia
+this program is a simulation for covid-19 pandamic in ethiopia
 that helps public health services and government officials
 to make a better descition and test thair theory in a controlled enviroment
 
