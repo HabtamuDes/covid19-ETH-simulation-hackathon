@@ -20,7 +20,7 @@ inputs
 processes
 ---------
 * create a dots that represents popln
-* collition to represent interaction
+* collision to represent interaction
 
 
 output
@@ -28,13 +28,6 @@ output
 
 * pygame window that displays dots and real time interactions
 * a graph that represents order of grouth
-
-
-how to model the infection
-
-* how to detect collition between blobs
-* when infected id collide with uninfected id
-* when a green and a red collide the green turns red
 
 
 

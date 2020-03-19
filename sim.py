@@ -21,22 +21,30 @@ class Simulation():
         self.interaction = interaction
         self.init_affected = init_affected
         self.clock = pygame.time.Clock()
-        self.infected = [500,501,502]
+        self.infected = [500]
 
-    def detect_colition(self,blobs):
+    def detect_collision(self,blobs):
         
         for blob_id in blobs:
             blob = blobs[blob_id]
 
-            # find a way to detect a collition 
-            self.infected.append(random.randint(200,500))
+            
+            for i in self.infected:
+                inf = blobs[i]
+                #equlidian distance  
+                #dis = (x1-x0)**2 + (y1-y0)**2
 
-            return blobs
+                distance = (blob.x - inf.x)**2 + (blob.y - inf.y)**2
+                
+                if distance <6 and blob_id not in self.infected:
+                    print([distance,blob_id])
+                    self.infected.append(blob_id)
+                    
         
         
     def draw(self,blobs):
         screen.fill(WHITE)
-        blobs = self.detect_colition(blobs)
+        self.detect_collision(blobs)
         for blob_id in blobs:
             blob = blobs[blob_id]
             if blob_id in self.infected:
@@ -49,6 +57,7 @@ class Simulation():
 
     def render(self):
         
+        #id and object
         blobs = dict(enumerate([Blob(GREEN) for i in range(self.population)]))
 
         running = True
