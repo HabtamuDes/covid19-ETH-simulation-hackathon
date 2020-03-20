@@ -9,7 +9,7 @@ to make a better descition and test thair theory in a controlled enviroment
 
 ## Video
 
-![] (sim.gif)
+![](./sim.gif)
 
 ## TODO
 
