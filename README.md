@@ -7,6 +7,10 @@ that helps public health services and government officials
 to make a better descition and test thair theory in a controlled enviroment
 
 
+## Video
+
+![] (sim.gif)
+
 ## TODO
 
 inputs
