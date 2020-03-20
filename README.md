@@ -1,5 +1,4 @@
 
-
 # simulation for covid-19 in ethiopia
 
 

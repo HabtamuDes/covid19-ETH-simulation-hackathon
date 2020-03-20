@@ -28,15 +28,14 @@ class Simulation():
         for blob_id in blobs:
             blob = blobs[blob_id]
 
-            
             for i in self.infected:
                 inf = blobs[i]
                 #equlidian distance  
                 #dis = (x1-x0)**2 + (y1-y0)**2
 
-                distance = (blob.x - inf.x)**2 + (blob.y - inf.y)**2
+                distance = np.sqrt((blob.x - inf.x)**2 + (blob.y - inf.y)**2)
                 
-                if distance <6 and blob_id not in self.infected:
+                if distance <15 and blob_id not in self.infected:
                     print([distance,blob_id])
                     self.infected.append(blob_id)
                     
@@ -69,6 +68,8 @@ class Simulation():
                     pygame.quit()
 
             self.draw(blobs)
+
+        pygame.quit()
 
     
 def main():
